@@ -67,11 +67,11 @@ const Order = ({
             </p>
             <p>
               <span className="text-primary font-weight-bold">TOTAL BILL:</span>{" "}
-              {items.reduce(
+              {`₹${items.reduce(
                 (sum, item) =>
                   sum + ((item.tax_pct / 100) * item.price + item.price),
                 0
-              )}
+              )}`}
             </p>
           </Col>
           <Col md={6} className="my-2">
